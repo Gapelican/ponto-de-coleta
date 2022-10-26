@@ -1,5 +1,6 @@
 window.addEventListener('load', ()=>{
     registerSW()
+    
 })
 
 async function registerSW(){
@@ -10,4 +11,7 @@ async function registerSW(){
             console.log(`SW registration failed`);
         }
     }
+
+    
 }
+

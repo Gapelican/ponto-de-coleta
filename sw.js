@@ -11,6 +11,13 @@ self.addEventListener('install', function(event) {
                 './scripts.js',
                 './app.css',
                 './style.css',
+                './images/C.jpg',
+                './images/D.jpg',
+                './images/E.jpg',
+                './images/H.jpg',
+                './images/O.jpg',
+                './images/R.webp',
+                './images/logo.png',
             ])
         })
     )
@@ -22,7 +29,7 @@ self.addEventListener('activate', e =>{
 })
 
 
-self.addEventListener('fetch', async e =>{
+self.addEventListener('fetch', async e => {
     const req = e.request
     const url = new URL(req.url)
 
@@ -35,7 +42,6 @@ self.addEventListener('fetch', async e =>{
     
 })  
 
-
 async function cacheFirst(req){
     const cache = await caches.open(cacheName)
     const cached = await cache.match(req)
@@ -47,7 +53,7 @@ async function networkAndCache(req){
     const cache = await caches.open(cacheName);
     try{
         const refresh = await fetch(req)
-        await cache.put(req, fresh.clone())
+        await cache.put(req, refresh.clone())
         return refresh
     } catch(e){
         const cached = await cache.match(req);
