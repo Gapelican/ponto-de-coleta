@@ -1,0 +1,19 @@
+{
+    "short_name": "coleta",
+    "name": "Ponte de coleta de lixo",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#fff",
+    "theme-color": "#fff",
+    "background_color": "#000",
+    "background-color": "#000",
+    "description": "Página sobre a pontos de coleta de lixo",
+    "icons": [
+        {
+            "src": "images/logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+
+}
